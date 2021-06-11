@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+        <!--- Funciones --->
+    <script>
+
+       function nombre() {
+            console.log('Hola Mundo'); 
+        }
+        nombre();
+        
+     /* Aplicacion con login de usuario para obtener notas de alumnos*/  
+
+     /* 1) crear un array de objeto para el usuario y contrasena*/
+         var usuarios = [
+             {
+                 usuarioNombre: 'jony',
+                 contrasena: '123456'
+             },
+             {
+                usuarioNombre: 'pepe',
+                 contrasena: 'abc' 
+             },
+             {
+                 usuarioNombre: 'lucas',
+                 contrasena: 'hola123'
+             },
+             {
+                 usuarioNombre: 'rodrigo',
+                 contrasena: 'chau321'
+             }    
+
+         ];
+
+     /* 2) crear un array de objeto para nombres y notas de los alumnos*/
+
+     var notas = [
+             {
+                 nombre: 'jony',
+                 nota: 10
+             },
+             {
+                nombre: 'pepe',
+                nota: 8 
+             }, 
+             {
+                 nombre: 'lucas',
+                 nota: 7
+             },
+             {
+                 nombre: 'rodrigo',
+                 nota: 10
+             }      
+
+         ];
+
+     /* 3) crear la funcion donde vamos a verificar si el usuario ingresado es correcto*/
+        
+     var usuarioPrompt = prompt ('Ingrese su usuario');
+     var contrasenaPrompt = prompt ('Ingrese su contrasena');
+    
+    function UsuarioValido(user, pass) {
+        for ( var i=0; i < usuarios.length; i++) {
+            if (user === usuarios[0].usuarioNombre && pass === usuarios[0].contrasena){
+             return true;
+            } else if (user === usuarios[1].usuarioNombre && pass === usuarios[1].contrasena){
+            return true;
+            } else if (user === usuarios[2].usuarioNombre && pass === usuarios[2].contrasena){
+            return true;
+            }else if (user === usuarios[3].usuarioNombre && pass === usuarios[3].contrasena){
+            return true;
+            }
+        } return false;
+    }
+
+
+    function  IniciarSesion(user, pass) {
+            if (UsuarioValido(user,pass)) {
+                console.log(notas)
+            } else {
+                alert('Ups, usuario y contrasena invalida')
+            }
+    }
+    IniciarSesion(usuarioPrompt, contrasenaPrompt);
+
+
+
+    /*function  IniciarSesion(user, pass) {
+    for ( var i=0; i < usuarios.length; i++) {
+        if (user === usuarios[0].usuarioNombre && pass === usuarios[0].contrasena){
+             alert(notas[0].nota);
+        } else if (user === usuarios[1].usuarioNombre && pass === usuarios[1].contrasena){
+             alert(notas[1].nota);
+        } else {
+             alert('Ups, usuario o contrasena incorrecta');
+         }
+     }
+
+    }      
+    
+    IniciarSesion(usuarioPrompt, contrasenaPrompt);*/
+
+    </script>
+
+
+
+    <script src="scrip.js"></script>
+</body>
+</html>
