@@ -380,13 +380,7 @@ main {
   opacity: 1;
   text-align: left;
 }
-.center--bar1 {
-  width: 118px;
-  position: absolute;
-  top: 122px;
-  left: 20px;
-  border: 1px solid white;
-}
+
 .percentage--0 {
   width: 118px;
   height: 20px;
@@ -397,6 +391,13 @@ main {
   top: 132px;
   left: 20px;
 }
+.center--bar1 {
+    width: 118px;
+    position: absolute;
+    top: 122px;
+    left: 20px;
+    border: 1px solid white;
+  }
 .bottom-card1 {
   width: 50px;
   height: 50px;
